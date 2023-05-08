@@ -23,3 +23,12 @@ const sequenceSum = (begin, end, step) => {
   }
   return begin + sequenceSum(begin + step, end, step);
 };
+
+// or
+
+const sequenceOfSum = (begin, end, step) => {
+  if (begin > end)
+    return 0;
+  const n = Math.floor((end - begin) / step) + 1;
+  return (2 * begin + step * (n - 1)) * n / 2;
+};
